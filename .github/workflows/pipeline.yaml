@@ -206,7 +206,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          # trigger the integration tests here
+          python -m pytest tests/unit -v
 
   deploy-prod:
     if: github.ref == 'refs/heads/main'
