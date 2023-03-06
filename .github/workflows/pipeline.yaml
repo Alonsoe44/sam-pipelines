@@ -3,15 +3,15 @@ name: Pipeline
 on:
   push:
     branches:
-      - 'main'
-      - 'feature**'
+      - "main"
+      - "feature**"
   delete:
     branches:
-      - 'feature**'
+      - "feature**"
 
 env:
-  PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AKIARJJWDGNKK5LP2PGW }}
-  PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.BUSY1WuffzQCV1/hE65+LtwgRxJB2brRXi8ocMuj }}
+  PIPELINE_USER_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  PIPELINE_USER_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: sam-pipeline-dev
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::088697156436:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-1LMYRIE38UP37
